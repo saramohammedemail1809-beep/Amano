@@ -1,98 +1,0 @@
-<!DOCTYPE html>
-<html lang="ar">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amano</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-  <div class="logo-container">
-    <div class="shield"><div class="bag"></div></div>
-    <div class="logo-text">أمانو</div>
-  </div>
-
-  <p class="app-description">
-    Amano تطبيق مبتكر يهتم بسلامتك الشخصية كأمرأة في السعودية. التطبيق يجمع بين البساطة، السرعة، والموارد المهمة لأي وقت.
-  </p>
-
-  <div class="buttons-container">
-    <button class="main-btn" onclick="imSafe()">أنا بأمان</button>
-    <button class="secondary-btn" onclick="showContacts()">جهات الاتصال</button>
-    <button class="secondary-btn" onclick="showResources()">الموارد</button>
-    <button class="secondary-btn" onclick="toggleOptions()">⋮</button>
-  </div>
-
-  <button onclick="toggleLanguage()">🌐 اللغة</button>
-  <button onclick="showInfoPage()">ℹ️ عن التطبيق</button>
-
-  <div id="optionsMenu" class="options-menu">
-    <ul>
-      <li>خدمة العملاء / الدعم</li>
-      <li>تقييم التطبيق</li>
-      <li>الإعدادات العامة</li>
-    </ul>
-  </div>
-
-  <div id="contactsPage" class="page hidden">
-    <h2>جهات الاتصال الموثوقة</h2>
-    <ul id="contactsList"></ul>
-    <input type="text" id="contactName" placeholder="اسم جهة الاتصال">
-    <input type="text" id="contactPhone" placeholder="رقم الهاتف">
-    <button onclick="addContact()">إضافة جهة اتصال</button>
-    <button onclick="hidePage('contactsPage')">رجوع</button>
-  </div>
-
-  <div id="resourcesPage" class="page hidden">
-    <h2>الموارد ونصائح السفر</h2>
-    <label for="countrySelect">اختر الدولة:</label>
-    <select id="countrySelect" onchange="showEmergencyNumbers()">
-      <option value="">--اختر--</option>
-      <option value="Saudi Arabia">السعودية</option>
-      <option value="Egypt">مصر</option>
-      <option value="USA">الولايات المتحدة</option>
-    </select>
-    <div id="emergencyNumbers"></div>
-    <h3>نصائح السفر:</h3>
-    <ul>
-      <li>احملي دائمًا معك نسخة من جواز السفر.</li>
-      <li>تجنبي التنقل بمناطق غير مألوفة وحدك.</li>
-      <li>احتفظي بأرقام الطوارئ المحلية في الهاتف.</li>
-    </ul>
-    <h3>قائمة التحقق للسفر:</h3>
-    <ul>
-      <li>بطاقات الهوية / جواز السفر</li>
-      <li>الأدوية الأساسية</li>
-      <li>ملابس مناسبة للوجهة</li>
-    </ul>
-    <button onclick="hidePage('resourcesPage')">رجوع</button>
-  </div>
-
-  <div id="infoPage" class="page hidden">
-    <h2>عن التطبيق</h2>
-    <p>
-      Amano تطبيق مبتكر يهتم بسلامتك الشخصية كأمرأة في السعودية. التطبيق يجمع بين البساطة، السرعة، والموارد المهمة لأي وقت.
-      <br><br>
-      ✨ <strong>أهم المميزات</strong><br>
-      1. زر الطمأنة – “أنا بأمان”: يرسل إشعار سريع.<br>
-      2. جهات الاتصال الموثوقة: حفظ الأشخاص وأرقامهم.<br>
-      3. موارد السفر والطوارئ: أرقام الطوارئ، نصائح، قائمة تحقق.<br>
-      4. قائمة خيارات سريعة: خدمة العملاء، تقييم التطبيق، إعدادات مرنة.<br><br>
-      🎯 <strong>لمن صُمم أمانو؟</strong><br>
-      - للنساء في السعودية الباحثات عن أمان إضافي.<br>
-      - للمسافرات والمتنقلات يوميًا.<br>
-      - للطالبات والموظفات.<br>
-      - للعائلات لمتابعة بناتها وأقاربها.<br><br>
-      🛡️ <strong>لماذا أمانو؟</strong><br>
-      واجهة بسيطة، ألوان هادئة، وشعار الدرع والحقيبة يعكس الحماية والسفر.<br><br>
-      🚀 <strong>المستقبل</strong><br>
-      نموذج أولي، الهدف تطوير التطبيق لمشاركة الموقع المباشر، تنبيهات ذكية، وموارد أوسع.<br><br>
-      🔑 أمانو = أمانك معك دائمًا، وين ما كنتِ.
-    </p>
-    <button onclick="hidePage('infoPage')">رجوع</button>
-  </div>
-
-  <script src="script.js"></script>
-</body>
-</html>
